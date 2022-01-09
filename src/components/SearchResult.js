@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 function SearchResult() {
     const { movie } = useParams();
-    const url = `https://imdb-api.com/en/API/Search/k_27fj9dus/${movie}`
+    const url = `https://imdb-api.com/en/API/Search/k_01clohoe/${movie}`
     const [data, setData] = useState([])
     useEffect(() => {
         axios.get(url).then((res)=>{
