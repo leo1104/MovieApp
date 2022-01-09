@@ -1,0 +1,332 @@
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/Mazius-Display-Regular.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: local('MyFont2'), url(./fonts/AvertaDemoPECuttedDemo-Regular.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'MyFont3';
+  src: local('MyFont3'), url(./fonts/AvertaDemoPE-ExtraBold.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+:root {
+  --MovieBodyColor: #040304;
+  --MovieTextColor: #fff;
+}
+body{
+  background-color:#040304;
+  color:#ffffff;
+font-family: "MyFont2";
+scroll-behavior: smooth;
+}
+
+
+/* Home  */
+.HomeBg{
+  background: url('https://cdn.discordapp.com/attachments/780837848030380112/929812133288493086/cover_image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.Home{
+  
+display: flex;
+    top: 12rem;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home h1{
+ font-size:3.125rem ; 
+ color: white;
+}
+.Home input{
+  text-align: left;
+  font-size: 16px;
+  width: 26%;
+  padding: 10px 40px;
+  font-family: "MyFont2";
+}
+.Home button{
+  background: #f40612;
+  font-size: 26px;
+  border: none;
+  padding: 8px 30px;
+  margin-top: 8px;
+  font-family: "MyFont2";
+  border-radius: 4px;
+}
+.Home button a{
+  text-decoration: none;
+  color: white;
+  font-family: "MyFont2";
+}
+
+
+.App {
+}
+.Cast{
+display: flex;
+justify-content: space-around;
+margin: 2rem 5rem;
+}
+.CastHeading{
+
+font-family: "MyFont2";
+letter-spacing: 4px;
+}
+.castName{
+  margin-top: 4rem;
+}
+.castActor{
+display: flex;
+margin-bottom: 1rem;
+align-items: center;
+}
+.castCircle{
+max-width: 60px;
+height: 60px;
+overflow: hidden;
+border-radius: 50%;
+}
+.castActorName{
+margin-left: 2rem;
+color: white;
+text-decoration: none;
+}
+
+.movieCards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movieCard {
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 20%;
+  margin: 4px;
+}
+.cardImg{
+  width: 100%;
+  height: auto;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------Movie.js----------------------------- */
+.MovieBody {
+  min-height: 100vh;
+  position: relative;
+  bottom: 8rem;
+}
+.MovieContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Movievideo {
+  width: 100%;
+  max-height: 25rem;
+}
+.MovieRatings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: min-content;
+  /* margin:1rem; */
+}
+.MovieRatings img {
+  width: 302px;
+  height: auto;
+}
+.MovieRatings p {
+  color: var(--MovieTextColor);
+  font-size: 32px;
+}
+.MovieRatings p span {
+  font-size: 54px;
+}
+.MovieDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: max-content;
+  padding-left: 2rem;
+position: relative;
+top: 8rem;
+}
+.MovieDescription h1 {
+  color: var(--MovieTextColor);
+  font-size: 48px;
+  font-family: "MyFont3";
+}
+.MovieDescription p {
+  color: var(--MovieTextColor);
+  font-size: 24px;
+}
+
+
+/* Search Result  */
+
+.movie_Cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+
+/* actors */
+
+.actorCircle{
+  max-width: 200px;
+height: 200px;
+overflow: hidden;
+margin-top: 2rem;
+margin:auto;
+border-radius: 50%;
+}
+.actorCircle img{
+  width: 100%;
+  height: auto;
+}
+.actorDetails h1{
+text-align: center;
+}
+.actorDetails p{
+  margin: 0 20%;
+  letter-spacing: 1px;
+}
+.actorDetails h2{
+  margin: 0 20%;
+  font-weight: bold;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.ActorMovies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.ActorCard{
+  width: 20%;
+  margin: 0 16px;
+}
+.ActorCard img{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
+.ActorCard h3{
+  text-align: center;
+  
+}
+.searchImg{
+  border-radius: 4px;
+}
+
+@media screen and (max-width:768px) {
+  .ActorMovies{
+    flex-wrap: wrap;
+  }
+  .ActorCard{
+    width: 50%;
+  }
+  .ActorCard img{
+    border-radius: 16px;
+  }
+  .Cast{
+    justify-content: left;
+    flex-direction: column;
+  }
+  .coverImg{
+    display: none !important;
+  }
+  .MovieRatings{
+    margin: auto;
+  }
+  .MovieContainer{
+    flex-direction: column;
+  margin-top: 2rem;
+  }
+  .MovieDescription{
+    width: auto;
+    top: 0;
+  }
+  .MovieBody{
+    bottom: 0;
+  }
+  .MovieRatings img{
+    width: 280px;
+    border-radius: 16px;
+  }
+  .Home h1{
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .Home input{
+    width: 68%;
+  }
+  .Home button{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .movieCard{
+    width: 100%;
+  }
+  .searchImg{
+    border-radius: 16px;
+  }
+}
