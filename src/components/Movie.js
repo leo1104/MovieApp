@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Movie() {
   const { movieId } = useParams();
-  const url = `https://imdb-api.com/en/API/Title/k_27fj9dus/${movieId}`;
-  const url2 = `https://imdb-api.com/en/API/Trailer/k_27fj9dus/${movieId}`;
+  const url = `https://imdb-api.com/en/API/Title/k_01clohoe/${movieId}`;
+  const url2 = `https://imdb-api.com/en/API/Trailer/k_01clohoe/${movieId}`;
   const [data, setData] = useState([]);
   const [actors, setActors] = useState([]);
   const [trailer,setTrailer]=useState([]);
