@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState()
     return (
         <div className='HomeBg'>
         <div className='Home'>
@@ -11,10 +11,11 @@ function Home() {
         <button type='submit'>
             <Link to={`/showmovie/${search}`}>Search</Link>
         </button>
-
         </div>
         </div>
     )
 }
+
+
 
 export default Home

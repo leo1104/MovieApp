@@ -2,10 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import {actionCreators} from '../state/index'
 function Movie() {
   const { movieId } = useParams();
+  // const dispatch = useDispatch();
+  // const data = useSelector(state=>state.data)
+  // const {loadData} = bindActionCreators(actionCreators,dispatch)
+
+
   const url = `https://imdb-api.com/en/API/Title/k_saouae7q/${movieId}`;
   const url2 = `https://imdb-api.com/en/API/Trailer/k_saouae7q/${movieId}`;
+  
+  
   const [data, setData] = useState([]);
   const [actors, setActors] = useState([]);
   const [trailer,setTrailer]=useState([]);
@@ -13,14 +23,18 @@ function Movie() {
     axios.get(url).then((res) => {
       setData(res.data);
       setActors(res.data.actorList);
+      // loadData(res.data)
       console.log(res.data);
     });
   }, []);
+  
   useEffect(() => {
     axios.get(url2).then((res) => {
       setTrailer(res.data);
     });
   }, []);
+
+  // console.log(redduxData)
   return (
     <>
     <div className="coverImg" style={{width:"auto",height:"80vh",display:"flex",justifyContent:"center"}}>
